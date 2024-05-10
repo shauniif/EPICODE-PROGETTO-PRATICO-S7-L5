@@ -1,0 +1,83 @@
+@import './functions'; 
+@import './variables'; 
+
+// modifiche
+// 1) creaazione nuovi colori
+$primary-color: #54b1d2;
+$secondary-color: #1E9EA9;
+$tertiary-color: #033249;
+
+// etc.
+// 2) inserire i colori -> "$themes-color"
+
+$new-theme-colors: (
+    'primary': $primary-color,
+    'secondary':$secondary-color,
+    'tertiary': $tertiary-color,
+
+    );
+    
+$theme-colors: map-merge($theme-colors, $new-theme-colors);
+@import './bootstrap.scss';
+
+.visibility {
+    visibility: hidden !important;
+}
+
+.scaleimg:hover {
+  transform: scale(0.9);
+    cursor: pointer;
+ }
+ main {
+    i, p {
+        cursor: pointer;
+    }
+ } 
+footer {
+    i, li, button {
+        cursor: pointer;
+    }
+    
+ }
+ .icon_image {
+    width: 1px!important;
+    height: 50px !important;
+ }
+
+ .ls {
+    letter-spacing:  6px !important;
+ }
+ .bposition {
+    left: 4.4em;
+    bottom: 0.3em;
+ }
+ .bpositiont {
+    left: 0.2em;
+    bottom: 0.3em;
+ }
+ .bpositiond {
+    left: 0;
+    bottom: 0.3em;
+ }
+
+
+ input[type="checkbox"] {
+   width: 2rem;
+   height: 2rem;
+   border: 1px solid rgb(247, 241, 241);
+   background-color: transparent;
+ 
+   &:checked {
+     background-color: transparent;
+     box-shadow: none;
+     border: 1px solid rgb(247, 241, 241);
+   }
+ 
+   &:focus {
+     background-color: transparent;
+     border-color: none;
+     box-shadow: none;
+     border: 1px solid rgb(247, 241, 241);
+     outline: none;
+   }
+ }
